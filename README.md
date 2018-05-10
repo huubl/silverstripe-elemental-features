@@ -26,25 +26,10 @@ A block that displays featured content - large image, title, description and lin
 
 A block to display multiple featured content cards - large image, title, description, link.
 
-
 ## Getting more elements
 
-Other elemental modules by Dynamic:
-
-* SilverStripe Elemental Blocks
-	* [Packagist](https://packagist.org/packages/dynamic/silverstripe-elemental-blocks)
-	* [GitHub](https://github.com/dynamic/silverstripe-elemental-blocks)
-* [SilverStripe Elemental Accordion](https://github.com/dynamic/silverstripe-elemental-accordion)  
-* [SilverStripe Elemental Blog](https://github.com/dynamic/silverstripe-elemental-blog)
-* [SilverStripe Elemental Countdown](https://github.com/dynamic/silverstripe-elemental-countdown)
-* [SilverStripe Elemental Customer Service](https://github.com/dynamic/silverstripe-elemental-customer-service)
-* [SilverStripe Elemental Flexslider](https://github.com/dynamic/silverstripe-elemental-flexslider)  
-* [SilverStripe Elemental Gallery](https://github.com/dynamic/silverstripe-elemental-gallery)
-* [Silverstripe Elemental oEmbed](https://github.com/dynamic/silverstripe-elemental-oembed)
-* [SilverStripe Elemental Sponsors](https://github.com/dynamic/silverstripe-elemental-sponsors)  
-* [SilverStripe Elemental Testimonials](https://github.com/dynamic/silverstripe-elemental-testimonials)  
+See [Elemental modules by Dynamic](https://github.com/dynamic/silverstripe-elemental-blocks#included-blocks)
 
 ## Configuration
 
 See [SilverStripe Elemental Configuration](https://github.com/dnadesign/silverstripe-elemental#configuration)
-
