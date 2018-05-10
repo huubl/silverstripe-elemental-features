@@ -24,7 +24,30 @@ A block that displays featured content - large image, title, description and lin
 
 ## Example usage
 
-A block to display multiple featured content cards - large image, title, description, link.
+A block to display rows of featured content - image, title, description, link.
+
+### Template Notes
+
+The default templates are based off [Bootstrap 4](https://getbootstrap.com/) classes/styling.
+
+Also included in the CMS is a checkbox for an alternate layout option. Both layout options are setup in includes that will work right away.
+
+## Screen Shots
+
+#### Front End sample of a Features Element
+![Front End sample of a Features Element](./readme-images/features-block-sample.jpg)
+
+#### Front End sample of a Features Element Alternate Layout
+![Front End sample of a Features Element](./readme-images/features-block-sample-alt.jpg)
+
+#### CMS - Features Element Main Tab
+![CMS - Features Block Main Tab](./readme-images/features-block-cms.jpg)
+
+#### CMS - Features Element - Features List
+![CMS - Features Block Main Tab](./readme-images/features-block-cms-features-list.jpg)
+
+#### CMS - Features Element - Feature Add/Edit
+![CMS - Features Block Main Tab](./readme-images/features-block-cms-feature.jpg)
 
 ## Getting more elements
 
