@@ -54,6 +54,15 @@ class ElementFeatures extends BaseElement
     ];
 
     /**
+     * Set to false to prevent an in-line edit form from showing in an elemental area. Instead the element will be
+     * clickable and a GridFieldDetailForm will be used.
+     *
+     * @config
+     * @var bool
+     */
+    private static $inline_editable = false;
+
+    /**
      * @return \SilverStripe\Forms\FieldList
      */
     public function getCMSFields()
