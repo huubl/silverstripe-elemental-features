@@ -45,11 +45,12 @@ SilverStripe\Security\Member:
     Email: "user"
     Password: "user"
 
+Dynamic\Elements\Features\Model\FeatureObject:
+  one:
+    Title: "Feature One"
+
 Dynamic\Elements\Features\Elements\ElementFeatures:
   one:
     Title: "Intro"
     Content: "<p>Page introduction lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>"
-
-Dynamic\Elements\Features\Model\FeatureObject:
-  one:
-    Title: "Feature One"
+    Features: =>Dynamic\Elements\Features\Model\FeatureObject.one

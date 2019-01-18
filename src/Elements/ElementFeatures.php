@@ -96,9 +96,24 @@ class ElementFeatures extends BaseElement
     /**
      * @return DBHTMLText
      */
-    public function ElementSummary()
+    public function getSummary()
     {
-        return DBField::create_field('HTMLText', $this->Content)->Summary(20);
+        if ($this->Features()->count() == 1) {
+            $feature = 'feature';
+        } else {
+            $feature = 'features';
+        }
+        return DBField::create_field('HTMLText', $this->Features()->count() . ' ' . $feature)->Summary(20);
+    }
+
+    /**
+     * @return array
+     */
+    protected function provideBlockSchema()
+    {
+        $blockSchema = parent::provideBlockSchema();
+        $blockSchema['content'] = $this->getSummary();
+        return $blockSchema;
     }
 
     /**
