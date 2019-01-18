@@ -15,8 +15,8 @@ A block that displays featured content - large image, title, description and lin
 
 ## Requirements
 
-* SilverStripe ^4.0
-* SilverStripe Elemental ^2.0
+* silverstripe/recipe-cms: ^1@dev || ^4@dev
+* dnadesign/silverstripe-elemental: ^2@dev || ^3@dev
 
 ## Installation
 
