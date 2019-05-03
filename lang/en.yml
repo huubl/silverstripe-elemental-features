@@ -1,0 +1,19 @@
+en:
+  Dynamic\Elements\Features\Elements\ElementFeatures:
+    AlternateDescription: 'Alternate image and text alignment'
+    AlternateLabel: 'Alternate'
+    BlockType: Features
+    ContentLabel: 'Content'
+    FeaturesLabel: 'Features'
+    PLURALNAME: 'Features Elements'
+    PLURALS:
+      one: 'A Features Element'
+      other: '{count} Features Elements'
+    SINGULARNAME: 'Features Element'
+
+  Dynamic\Elements\Features\Model\FeatureObject:
+    PLURALNAME: Features
+    PLURALS:
+      one: 'A Feature'
+      other: '{count} Features'
+    SINGULARNAME: Feature

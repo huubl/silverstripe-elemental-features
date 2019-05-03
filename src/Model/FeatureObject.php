@@ -15,16 +15,6 @@ use SilverStripe\Forms\FieldList;
 class FeatureObject extends BaseElementObject
 {
     /**
-     * @return string
-     */
-    private static $singular_name = 'Feature';
-
-    /**
-     * @return string
-     */
-    private static $plural_name = 'Features';
-
-    /**
      * @var array
      */
     private static $db = array(

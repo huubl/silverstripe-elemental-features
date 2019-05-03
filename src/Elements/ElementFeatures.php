@@ -24,16 +24,6 @@ class ElementFeatures extends BaseElement
     private static $icon = 'font-icon-block-banner';
 
     /**
-     * @return string
-     */
-    private static $singular_name = 'Features Element';
-
-    /**
-     * @return string
-     */
-    private static $plural_name = 'Features Elements';
-
-    /**
      * @var string
      */
     private static $table_name = 'ElementFeatures';
@@ -63,6 +53,21 @@ class ElementFeatures extends BaseElement
     private static $inline_editable = false;
 
     /**
+     * @param bool $includerelations
+     * @return array
+     */
+    public function fieldLabels($includerelations = true)
+    {
+        $labels = parent::fieldLabels($includerelations);
+
+        $labels['Content'] = _t(__CLASS__.'.ContentLabel', 'Description');
+        $labels['Alternate'] = _t(__CLASS__ . '.AlternateLabel', 'Alternate');
+        $labels['Features'] = _t(__CLASS__ . '.FeaturesLabel', 'Features');
+
+        return $labels;
+    }
+
+    /**
      * @return \SilverStripe\Forms\FieldList
      */
     public function getCMSFields()
@@ -70,15 +75,26 @@ class ElementFeatures extends BaseElement
         $this->beforeUpdateCMSFields(function (FieldList $fields) {
             $fields->dataFieldByName('Content')
                 ->setRows(8);
-            $fields->dataFieldByName('Alternate')->setTitle('Alternate images and text');
+            $fields->dataFieldByName('Alternate')
+                ->setDescription(_t(
+                    __CLASS__ . '.AlternateDescription',
+                    'Alternate image and text alignment'
+                ));
 
             if ($this->ID) {
                 // Features
                 $features = $fields->dataFieldByName('Features');
+                $fields->removeByName('Features');
+
                 $config = $features->getConfig();
-                $config->addComponent(new GridFieldOrderableRows());
-                $config->removeComponentsByType(GridFieldAddExistingAutocompleter::class);
-                $config->removeComponentsByType(GridFieldDeleteAction::class);
+                $config
+                    ->addComponent(new GridFieldOrderableRows())
+                    ->removeComponentsByType([
+                        GridFieldAddExistingAutocompleter::class,
+                        GridFieldDeleteAction::class
+                    ]);
+
+                $fields->addFieldToTab('Root.Main', $features);
             }
         });
 
@@ -98,12 +114,13 @@ class ElementFeatures extends BaseElement
      */
     public function getSummary()
     {
-        if ($this->Features()->count() == 1) {
-            $feature = 'feature';
-        } else {
-            $feature = 'features';
-        }
-        return DBField::create_field('HTMLText', $this->Features()->count() . ' ' . $feature)->Summary(20);
+        $count = $this->Features()->count();
+        $label = _t(
+            FeatureObject::class . '.PLURALS',
+            'A Feature|{count} Features',
+            [ 'count' => $count ]
+        );
+        return DBField::create_field('HTMLText', $label)->Summary(20);
     }
 
     /**
