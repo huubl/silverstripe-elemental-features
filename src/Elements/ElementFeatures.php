@@ -4,6 +4,8 @@ namespace Dynamic\Elements\Features\Elements;
 
 use DNADesign\Elemental\Models\BaseElement;
 use Dynamic\Elements\Features\Model\FeatureObject;
+use SilverStripe\Forms\CompositeField;
+use SilverStripe\Forms\FieldGroup;
 use SilverStripe\Forms\FieldList;
 use SilverStripe\Forms\GridField\GridFieldAddExistingAutocompleter;
 use SilverStripe\Forms\GridField\GridFieldDeleteAction;
@@ -60,8 +62,8 @@ class ElementFeatures extends BaseElement
     {
         $labels = parent::fieldLabels($includerelations);
 
-        $labels['Content'] = _t(__CLASS__.'.ContentLabel', 'Description');
-        $labels['Alternate'] = _t(__CLASS__ . '.AlternateLabel', 'Alternate');
+        $labels['Content'] = _t(__CLASS__.'.ContentLabel', 'Intro');
+        $labels['Alternate'] = _t(__CLASS__ . '.AlternateLabel', 'Alternate Layout');
         $labels['Features'] = _t(__CLASS__ . '.FeaturesLabel', 'Features');
 
         return $labels;
@@ -74,12 +76,27 @@ class ElementFeatures extends BaseElement
     {
         $this->beforeUpdateCMSFields(function (FieldList $fields) {
             $fields->dataFieldByName('Content')
-                ->setRows(8);
-            $fields->dataFieldByName('Alternate')
-                ->setDescription(_t(
-                    __CLASS__ . '.AlternateDescription',
-                    'Alternate image and text alignment'
-                ));
+                ->setTitle($this->fieldLabel('Content'))
+                ->setRows(5);
+
+            $alternate = $fields->dataFieldByName('Alternate');
+            $fields->removeByName('Alternate');
+
+            $fields->addFieldToTab(
+                'Root.Main',
+                CompositeField::create(
+                    $alternate
+                        ->setTitle($this->fieldLabel('Alternate'))
+                        ->setDescription(_t(
+                            __CLASS__ . '.AlternateDescription',
+                            'alternate image and text alignment - first feature: image left, copy right; 
+                                second feature: image right, copy left;'
+                        ))
+                )->setTitle(_t(
+                    __CLASS__ . '.LayoutLabel',
+                    'Layout'
+                ))
+            );
 
             if ($this->ID) {
                 // Features

@@ -34,6 +34,13 @@ class FeatureObject extends BaseElementObject
     private static $table_name = 'FeatureObject';
 
     /**
+     * @var array
+     */
+    private static $summary_fields = [
+        'Summary',
+    ];
+
+    /**
      * @var string
      */
     private static $default_sort = 'Sort';
@@ -72,5 +79,13 @@ class FeatureObject extends BaseElementObject
         }
 
         return $page;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getSummary()
+    {
+        return $this->dbObject('Content')->Summary(20);
     }
 }

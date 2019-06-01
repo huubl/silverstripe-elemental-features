@@ -1,10 +1,11 @@
 en:
   Dynamic\Elements\Features\Elements\ElementFeatures:
-    AlternateDescription: 'Alternate image and text alignment'
-    AlternateLabel: 'Alternate'
+    AlternateDescription: 'alternate image and text alignment - first feature: image left, copy right; second feature: image right, copy left;'
+    AlternateTitle: 'Alternate Layout'
     BlockType: Features
-    ContentLabel: 'Content'
+    ContentLabel: 'Intro'
     FeaturesLabel: 'Features'
+    LayoutLabel: 'Layout'
     PLURALNAME: 'Features Elements'
     PLURALS:
       one: 'A Features Element'
