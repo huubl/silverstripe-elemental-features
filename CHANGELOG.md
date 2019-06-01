@@ -1,6 +1,17 @@
 # Change Log
 
-## [2.0.3](https://github.com/dynamic/silverstripe-elemental-features/tree/2.0.3) (2019-03-20)
+## [2.0.4](https://github.com/dynamic/silverstripe-elemental-features/tree/2.0.4) (2019-06-01)
+[Full Changelog](https://github.com/dynamic/silverstripe-elemental-features/compare/2.0.3...2.0.4)
+
+**Merged pull requests:**
+
+- Jenkinsfile [\#13](https://github.com/dynamic/silverstripe-elemental-features/pull/13) ([jsirish](https://github.com/jsirish))
+- new travis and scrut configs [\#12](https://github.com/dynamic/silverstripe-elemental-features/pull/12) ([jsirish](https://github.com/jsirish))
+- cms design [\#11](https://github.com/dynamic/silverstripe-elemental-features/pull/11) ([jsirish](https://github.com/jsirish))
+- ElementFeatures $owns Features [\#10](https://github.com/dynamic/silverstripe-elemental-features/pull/10) ([jsirish](https://github.com/jsirish))
+- initial i18n [\#9](https://github.com/dynamic/silverstripe-elemental-features/pull/9) ([jsirish](https://github.com/jsirish))
+
+## [2.0.3](https://github.com/dynamic/silverstripe-elemental-features/tree/2.0.3) (2019-03-21)
 [Full Changelog](https://github.com/dynamic/silverstripe-elemental-features/compare/2.0.2...2.0.3)
 
 **Closed issues:**
