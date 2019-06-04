@@ -1,5 +1,13 @@
 # Change Log
 
+## [2.0.5](https://github.com/dynamic/silverstripe-elemental-features/tree/2.0.5) (2019-06-03)
+[Full Changelog](https://github.com/dynamic/silverstripe-elemental-features/compare/2.0.4...2.0.5)
+
+**Merged pull requests:**
+
+- update docs and guidelines [\#15](https://github.com/dynamic/silverstripe-elemental-features/pull/15) ([jsirish](https://github.com/jsirish))
+- transifex config [\#14](https://github.com/dynamic/silverstripe-elemental-features/pull/14) ([jsirish](https://github.com/jsirish))
+
 ## [2.0.4](https://github.com/dynamic/silverstripe-elemental-features/tree/2.0.4) (2019-06-01)
 [Full Changelog](https://github.com/dynamic/silverstripe-elemental-features/compare/2.0.3...2.0.4)
 
